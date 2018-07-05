@@ -1,4 +1,3 @@
-
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.baidumapsdk">
+    package="qiuxiang.baidumapsdk">
 </manifest>

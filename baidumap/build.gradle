@@ -5,16 +5,15 @@ publish {
     userOrg = bintrayUser
     groupId = 'qiuxiang'
     artifactId = 'baidumap-sdk'
-    publishVersion = '0.0.7'
+    publishVersion = '0.0.8'
     desc = 'BaiduMap SDK'
     website = 'https://github.com/qiuxiang/baidumap-sdk'
 }
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion '28.0.3'
+    compileSdkVersion 29
 }
 
 dependencies {
-    compile files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/BaiduLBS_Android.jar')
 }

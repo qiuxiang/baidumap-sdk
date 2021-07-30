@@ -1,10 +1,6 @@
 plugins {
     id 'com.android.library'
-    id 'maven-publish'
 }
-
-group = 'qiuxiang'
-version = '1.0'
 
 android {
     compileSdkVersion 29
@@ -12,18 +8,4 @@ android {
 
 dependencies {
     implementation files('libs/BaiduLBS_Android.jar')
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            // Creates a Maven publication called "release".
-            release(MavenPublication) {
-                from components.release
-                groupId = 'qiuxiang'
-                artifactId = 'baidumap-sdk'
-                version = '1.0'
-            }
-        }
-    }
 }

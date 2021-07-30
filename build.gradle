@@ -2,22 +2,22 @@ buildscript {
     repositories {
         google()
         jcenter()
+        mavenCentral()
     }
-
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.0'
-        classpath 'com.novoda:bintray-release:0.9.2'
+        classpath "com.android.tools.build:gradle:4.1.0"
     }
 }
 
-subprojects {
+allprojects {
     repositories {
+        mavenCentral()
         google()
+        maven { url "https://jitpack.io" }
         jcenter()
     }
 }
 
-wrapper {
-    distributionType = Wrapper.DistributionType.BIN
-    gradleVersion = '5.4.1'
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
